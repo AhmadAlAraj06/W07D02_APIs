@@ -60,6 +60,15 @@ app.post("/create/user", (req, res) => {
 app.get("/home",(req,res)=>{
     res.send("hiii every body in server")
 })
+app.get("/first-user", (req, res) => {
+  res.status(200);
+  res.json(users[0]);
+});
+
+app.get("/", (req, res) => {
+  res.status(200);
+  res.json('Hello World')
+});
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
